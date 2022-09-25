@@ -6,8 +6,9 @@ using System.Threading;
 
 namespace EladAssignment1
 {
+  
     class City
-    {
+    { 
         private static int CodeCityIncreament = 111;
         private static int DisplayCityIncreament = 0;
 
@@ -21,16 +22,10 @@ namespace EladAssignment1
             this.code = Interlocked.Increment(ref CodeCityIncreament);//Auto increament
             this.display= Interlocked.Increment(ref DisplayCityIncreament);//Auto increament
         }
-
-        public City()
-        {
-
-        }
-
-        public string geName
+        public string getName
         {
             get { return name; }
-            set { name = value; }
+            set { if (name == null||name=="") throw new Exception("Please try again"); else name = value; }
         }
 
         public int getCode
