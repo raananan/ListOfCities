@@ -23,3 +23,4 @@ C:\Users\User\source\repos\רענן- מטלת בית\EladAssignment1\EladAssignm
 C:\Users\User\source\repos\רענן- מטלת בית\EladAssignment1\EladAssignment1\obj\Debug\netcoreapp3.1\EladAssignment1.dll
 C:\Users\User\source\repos\רענן- מטלת בית\EladAssignment1\EladAssignment1\obj\Debug\netcoreapp3.1\EladAssignment1.pdb
 C:\Users\User\source\repos\רענן- מטלת בית\EladAssignment1\EladAssignment1\obj\Debug\netcoreapp3.1\EladAssignment1.genruntimeconfig.cache
+C:\Users\User\source\repos\רענן- מטלת בית\EladAssignment1\EladAssignment1\obj\Debug\netcoreapp3.1\EladAssignment1.csprojAssemblyReference.cache

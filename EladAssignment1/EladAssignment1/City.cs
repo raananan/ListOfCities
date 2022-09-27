@@ -9,18 +9,18 @@ namespace EladAssignment1
   
     class City
     { 
-        private static int CodeCityIncreament = 111;
-        private static int DisplayCityIncreament = 0;
+        private static int CodeCityIncrement = 111;
+        private static int DisplayCityIncrement = 0;
 
-        public string name;
-        public int code;
-        public int display;
+        private string name;
+        private int code;
+        private int display;
 
         public City(string _name)
         {
             this.name = _name;
-            this.code = Interlocked.Increment(ref CodeCityIncreament);//Auto increament
-            this.display= Interlocked.Increment(ref DisplayCityIncreament);//Auto increament
+            this.code = Interlocked.Increment(ref CodeCityIncrement);//Auto increment
+            this.display= Interlocked.Increment(ref DisplayCityIncrement);//Auto increment
         }
         public string getName
         {

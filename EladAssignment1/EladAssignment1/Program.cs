@@ -13,7 +13,7 @@ namespace EladAssignment1
             int num;
             while (true)
             {
-                Console.WriteLine("Please choose one from the options\n 1 - Create city\n2 - Create street\n 3-Display all cities\n 4-Display all streets\n 5-Exit");
+                Console.WriteLine("Please choose one from the options\n\n1 - Create city\n2 - Create street\n3 - Display all cities\n4 - Display all streets\n5 - Exit");
                 try
                 {
                     num = Convert.ToInt32(Console.ReadLine());
@@ -59,8 +59,8 @@ namespace EladAssignment1
                 {
                     name = Console.ReadLine();
                     Cities.Add(new City(name) { getName = name });
-                    Console.WriteLine("City added with success");
-                    Console.WriteLine("{0}", name);
+                    Console.WriteLine("City added with success ");
+                    Console.WriteLine("City {0}", name);
                     Thread.Sleep(500);
                 }
                 catch (Exception e)
@@ -82,13 +82,15 @@ namespace EladAssignment1
                 {
                     while (true)
                     {
-                        Console.WriteLine("Please add the code of city which contain the street");
+                        Console.WriteLine("Please enter the code of city which contain the street by following list:\n");
+                        PrintCity();
                         code_city = Convert.ToInt32(Console.ReadLine());
                         foreach (City city in Cities)
                         {
-                            if (city.code == code_city)
+                            if (city.getCode == code_city)
                             {
                                 Streets.Add(new Street(name,code_city) { getName = name , getCodeCity=code_city});
+                                Console.WriteLine("Street {0} added with success to city {1}\n",name,city.getName);
                                 flag = 1;
                             }
                         }
@@ -109,31 +111,26 @@ namespace EladAssignment1
             {
                 foreach(City city in Cities)
                 {
-                    Console.WriteLine("{0}.City: {1}, code of city {2}",city.display,city.getName, city.getCode);
+                    Console.WriteLine("{0}.City: {1}, code of city {2}",city.getDisplay,city.getName, city.getCode);
                 }
             }
             void PrintStreet()
             {
-                foreach (Street street in Streets)
+                for (int i = 0; i < Cities.Count; i++)
                 {
-                    Console.WriteLine("Please enter the city name for disply streets");
-                    string name = Console.ReadLine();
-                    for(int i=0;i<Cities.Count;i++)
-                    {
-                        Console.WriteLine("For " + Cities[i].getName + " Exist following streets\n");
+                    Console.WriteLine("For " + Cities[i].getName + " Exist following streets\n");
 
-                        for (int j=0;j<Streets.Count;j++)
-                        {
-                            if(Streets[j].code_city==Cities[i].code)
-                            {
-                                Console.WriteLine(Streets[j].getName + "\n");
-                            }
-                        }
-                    }
+                   for (int j = 0; j < Streets.Count; j++)
+                      {
+                        if (Streets[j].getCodeCity == Cities[i].getCode)
+                           {
+                             Console.WriteLine(Streets[j].getName + "\n");
+                           }
+                      }
                 }
             }
-        }
-        }
+          }
+       }
     }
         
 

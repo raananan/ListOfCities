@@ -13,10 +13,10 @@ namespace EladAssignment1
         private static int CodeCityIncreament = 111;
         private static int DisplayCityIncreament = 0;
 
-        public string name;
-        public int code;
-        public int display;
-        public int code_city;
+        private string name;
+        private int code;
+        private int display;
+        private int code_city;
 
 
         public Street(string _name, int _code_city)
